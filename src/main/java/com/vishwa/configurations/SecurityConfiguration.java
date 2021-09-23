@@ -45,11 +45,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable().cors().and().authorizeRequests()
-				.antMatchers("/home/**" , "/authenticate", "/register", "/", "/static/**", "/manifest.json", "/favicon.ico",
+				.antMatchers( "/home/**" , "/h2-console" , "/h2-console/**" , "/authenticate", "/register", "/", "/static/**", "/manifest.json", "/favicon.ico",
 						"/logo192.png"  , "/swagger/**")
 				.permitAll().anyRequest().authenticated().and().sessionManagement()//
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		http.addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class);
+		http.headers().frameOptions().sameOrigin();
 	}
 
 	@Bean
