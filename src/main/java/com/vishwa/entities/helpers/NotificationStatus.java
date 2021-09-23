@@ -22,5 +22,38 @@ public class NotificationStatus {
 	private Status status;
 
 	@ManyToOne(targetEntity = Notification.class)
-	private Notification notification ;
+	private Notification notification;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+	public Notification getNotification() {
+		return notification;
+	}
+
+	public void setNotification(Notification notification) {
+		this.notification = notification;
+	}
+
 }

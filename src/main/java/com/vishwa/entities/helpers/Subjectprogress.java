@@ -19,7 +19,6 @@ import com.vishwa.entities.Video;
 import lombok.Data;
 
 @Entity
-@Data
 public class Subjectprogress {
 
 	@Id
@@ -39,4 +38,45 @@ public class Subjectprogress {
 			@JoinColumn(name = "subjectprogress_id") }, inverseJoinColumns = { @JoinColumn(name = "vids_id") })
 	private List<Video> vids = new LinkedList<>();
 
+	public   String getId() {
+		return id;
+	}
+
+	public   void setId(String id) {
+		this.id = id;
+	}
+
+	public   String getLastlocation() {
+		return lastlocation;
+	}
+
+	public   void setLastlocation(String lastlocation) {
+		this.lastlocation = lastlocation;
+	}
+
+	public   Subject getSub() {
+		return sub;
+	}
+
+	public   void setSub(Subject sub) {
+		this.sub = sub;
+	}
+
+	public   UserData getUser() {
+		return user;
+	}
+
+	public   void setUser(UserData user) {
+		this.user = user;
+	}
+
+	public List<Video> getVids() {
+		return vids;
+	}
+
+	public   void setVids(List<Video> vids) {
+		this.vids = vids;
+	}
+	
+	
 }

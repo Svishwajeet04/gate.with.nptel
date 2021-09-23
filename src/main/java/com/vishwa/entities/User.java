@@ -15,11 +15,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.vishwa.entities.enums.Stream;
 
 import lombok.Data;
+
 @Entity
-@Data
 public class User implements UserDetails {
 
-	private static final long serialVersionUID = 1L;
+	private static long serialVersionUID = 1L;
 	private int active;
 	private Date date;
 
@@ -81,4 +81,81 @@ public class User implements UserDetails {
 	public boolean isEnabled() {
 		return true;
 	}
+
+	public int getActive() {
+		return active;
+	}
+
+	public void setActive(int active) {
+		this.active = active;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public Stream getStream() {
+		return stream;
+	}
+
+	public void setStream(Stream stream) {
+		this.stream = stream;
+	}
+
+	public UserData getUdata() {
+		return udata;
+	}
+
+	public void setUdata(UserData udata) {
+		this.udata = udata;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 }
