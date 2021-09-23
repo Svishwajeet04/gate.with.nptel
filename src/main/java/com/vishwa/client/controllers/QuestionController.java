@@ -14,33 +14,33 @@ public class QuestionController {
 	public ResponseEntity<Object> getQuestion(){
 		return null;
 	}
-	
+
 	@GetMapping("/questions/getLatestTime")
 	public ResponseEntity<Object> getLatestTime(){
 		return null;
 	}
-	
-	
+
+
 	@PutMapping("/questions/add")
 	public ResponseEntity<Object> addQuestion(){
 		return null;
 	}
-	
+
 	@DeleteMapping("/questions/{qid}")
 	public ResponseEntity<Object> deleteQuestion(){
 		return null ;
 	}
-	
+
 	@PatchMapping("/questions/{qid}")
 	public ResponseEntity<Object> editQuestion(){
 		return null;
 	}
-	
+
 	@PutMapping("")
 	public ResponseEntity<Object> shareQuestionInGroup(){
 		return null;
 	}
-	
+
 	@PutMapping("/questions/{qid}/save")
 	public ResponseEntity<Object> saveQuestion(){
 		return null;

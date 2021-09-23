@@ -14,7 +14,6 @@ import com.vishwa.entities.enums.Scope;
 import lombok.Data;
 
 @Entity
-@Data
 public class Reply {
 
 	@ManyToOne(targetEntity = Answer.class)
@@ -35,7 +34,73 @@ public class Reply {
 
 	@ManyToOne(targetEntity = User.class)
 	private User uid;
-	
+
 	private Scope visibilty;
+
+	public Answer getAid() {
+		return aid;
+	}
+
+	public void setAid(Answer aid) {
+		this.aid = aid;
+	}
+
+	public Comment getCid() {
+		return cid;
+	}
+
+	public void setCid(Comment cid) {
+		this.cid = cid;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public Question getQid() {
+		return qid;
+	}
+
+	public void setQid(Question qid) {
+		this.qid = qid;
+	}
+
+	public String getRdata() {
+		return rdata;
+	}
+
+	public void setRdata(String rdata) {
+		this.rdata = rdata;
+	}
+
+	public User getUid() {
+		return uid;
+	}
+
+	public void setUid(User uid) {
+		this.uid = uid;
+	}
+
+	public Scope getVisibilty() {
+		return visibilty;
+	}
+
+	public void setVisibilty(Scope visibilty) {
+		this.visibilty = visibilty;
+	}
+	
+	
 
 }

@@ -37,9 +37,9 @@ public class LoginController {
 	public ResponseEntity<Object> createUser(@RequestBody UserRegisterDto user) {
 		user = lservice.createUser(user);
 		if (user != null)
-			return new ResponseEntity<Object>(user, HttpStatus.CREATED);
+			return new ResponseEntity<>(user, HttpStatus.CREATED);
 		else {
-			return new ResponseEntity<Object>(null, HttpStatus.ALREADY_REPORTED);
+			return new ResponseEntity<>(null, HttpStatus.ALREADY_REPORTED);
 		}
 	}
 

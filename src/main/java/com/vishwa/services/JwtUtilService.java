@@ -14,8 +14,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import io.jsonwebtoken.Claims;
@@ -29,10 +27,10 @@ public class JwtUtilService {
 
 	@Value("${security.jwt.token.secret-key:victoria_secret}")
 	private String secretKey = "victoria_secret";
-	
+
 	@Autowired
 	private MyUserDetailService userDetailsService;
-	
+
 	@Value("${security.jwt.token.expire-length:3600000}")
 	private long validityInMilliseconds = 360000000; // 1h
 

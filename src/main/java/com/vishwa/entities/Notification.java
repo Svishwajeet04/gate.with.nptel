@@ -18,7 +18,6 @@ import com.vishwa.entities.helpers.NotificationStatus;
 import lombok.Data;
 
 @Entity
-@Data
 public class Notification {
 
 	@Id
@@ -41,4 +40,70 @@ public class Notification {
 	private RepType objType2;
 
 	private String Obj2Id;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public NotificationType getNotification() {
+		return notification;
+	}
+
+	public void setNotification(NotificationType notification) {
+		this.notification = notification;
+	}
+
+	public User getNotificationFrom() {
+		return notificationFrom;
+	}
+
+	public void setNotificationFrom(User notificationFrom) {
+		this.notificationFrom = notificationFrom;
+	}
+
+	public List<NotificationStatus> getBroadCast() {
+		return broadCast;
+	}
+
+	public void setBroadCast(List<NotificationStatus> broadCast) {
+		this.broadCast = broadCast;
+	}
+
+	public RepType getObjType() {
+		return objType;
+	}
+
+	public void setObjType(RepType objType) {
+		this.objType = objType;
+	}
+
+	public String getObjId() {
+		return objId;
+	}
+
+	public void setObjId(String objId) {
+		this.objId = objId;
+	}
+
+	public RepType getObjType2() {
+		return objType2;
+	}
+
+	public void setObjType2(RepType objType2) {
+		this.objType2 = objType2;
+	}
+
+	public String getObj2Id() {
+		return Obj2Id;
+	}
+
+	public void setObj2Id(String obj2Id) {
+		Obj2Id = obj2Id;
+	}
+	
+	
 }

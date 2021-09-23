@@ -20,7 +20,7 @@ public class NotificationStatus {
 	private User user;
 
 	private Status status;
-	
+
 	@ManyToOne(targetEntity = Notification.class)
 	private Notification notification ;
 }

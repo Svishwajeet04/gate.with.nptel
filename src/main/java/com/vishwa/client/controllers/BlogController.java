@@ -11,7 +11,7 @@ public class BlogController {
 	public ResponseEntity<Object> getAllBlogs() {
 		return null;
 	}
-	
+
 	@GetMapping("/blogs/{bid}/data")
 	public ResponseEntity<Object> getBlogData(){
 		return null;

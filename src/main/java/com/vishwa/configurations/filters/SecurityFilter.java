@@ -20,7 +20,7 @@ import com.vishwa.services.JwtUtilService;
 
 @Component
 public class SecurityFilter extends OncePerRequestFilter {
-	
+
 	@Autowired
 	JwtUtilService jwtutil;
 

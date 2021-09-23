@@ -59,7 +59,105 @@ public class Answer {
 	private UserData uid;
 
 	private Scope visibilty;
-	
+
 	@ManyToMany(targetEntity = Group.class )
 	private List<Group> shared = new LinkedList<>();
+
+	public String getAdata() {
+		return adata;
+	}
+
+	public void setAdata(String adata) {
+		this.adata = adata;
+	}
+
+	public List<Comment> getComs() {
+		return coms;
+	}
+
+	public void setComs(List<Comment> coms) {
+		this.coms = coms;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public List<User> getDislikes() {
+		return dislikes;
+	}
+
+	public void setDislikes(List<User> dislikes) {
+		this.dislikes = dislikes;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public List<User> getLikes() {
+		return likes;
+	}
+
+	public void setLikes(List<User> likes) {
+		this.likes = likes;
+	}
+
+	public Question getQid() {
+		return qid;
+	}
+
+	public void setQid(Question qid) {
+		this.qid = qid;
+	}
+
+	public List<Report> getReps() {
+		return reps;
+	}
+
+	public void setReps(List<Report> reps) {
+		this.reps = reps;
+	}
+
+	public List<Tag> getTags() {
+		return tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;
+	}
+
+	public UserData getUid() {
+		return uid;
+	}
+
+	public void setUid(UserData uid) {
+		this.uid = uid;
+	}
+
+	public Scope getVisibilty() {
+		return visibilty;
+	}
+
+	public void setVisibilty(Scope visibilty) {
+		this.visibilty = visibilty;
+	}
+
+	public List<Group> getShared() {
+		return shared;
+	}
+
+	public void setShared(List<Group> shared) {
+		this.shared = shared;
+	}
+	
+	
 }

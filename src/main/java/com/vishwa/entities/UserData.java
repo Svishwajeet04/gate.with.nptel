@@ -38,17 +38,17 @@ public class UserData {
 
 	@OneToMany(targetEntity = Education.class, mappedBy = "user")
 	private List<Education> edu = new ArrayList<>();
-	
+
 	@OneToMany(targetEntity = User.class)
 	@JoinTable(name = "user_data_requested", joinColumns = { @JoinColumn(name = "user_data_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "requestSent_id") })
 	private List<User> requestSent = new ArrayList<>();
-	
+
 	@OneToMany(targetEntity = User.class)
 	@JoinTable(name = "user_data_Recieved", joinColumns = { @JoinColumn(name = "user_data_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "requestRecieved_id") })
 	private List<User> requestRecieved = new ArrayList<>();
-	
+
 
 	@OneToMany(targetEntity = User.class)
 	@JoinTable(name = "user_data_follower", joinColumns = { @JoinColumn(name = "user_data_id") }, inverseJoinColumns = {

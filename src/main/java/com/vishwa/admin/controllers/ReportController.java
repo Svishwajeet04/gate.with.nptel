@@ -12,20 +12,20 @@ public class ReportController {
 	public ResponseEntity<Object> getUnreadReports(){
 		return null ;
 	}
-	
+
 	@GetMapping("/admin/reports/highPriority")
 	public ResponseEntity<Object> getHighPriorityUnreadReports(){
 		return null;
 	}
-	
+
 	@GetMapping("/admin/reports/{id}")
 	public ResponseEntity<Object> getReportDataById(){
 		return null;
 	}
-	
+
 	@PatchMapping("/admin/reports/{id}/markAcknowledged")
 	public ResponseEntity<Object> markAcknowledged(){
 		return null;
 	}
-	
+
 }

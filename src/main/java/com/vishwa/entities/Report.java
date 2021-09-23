@@ -4,8 +4,6 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -16,7 +14,7 @@ import com.vishwa.entities.enums.RepType;
 public class Report {
 
 	private Date date;
-	
+
 	@Id
 	@Column(unique = true, columnDefinition = "VARCHAR(10)")
 	private String id;
@@ -29,11 +27,11 @@ public class Report {
 
 	@ManyToOne(targetEntity = UserData.class)
 	private UserData uid;
-	
+
 	private boolean admin;
-	
+
 	private int priority;
-	
+
 	private String adminMessage;
 
 }

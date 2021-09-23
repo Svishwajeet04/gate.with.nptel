@@ -10,30 +10,30 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AdminBlogController {
 
-	
+
 	@GetMapping("/admin/blogs")
 	public ResponseEntity<Object> getAllBlogs() {
 		return null;
 	}
-	
+
 	@GetMapping("/admin/blogs/{bid}/data")
 	public ResponseEntity<Object> getBlogData(){
 		return null;
 	}
-	
+
 	@PatchMapping("/admin/blogs/{bid}/data")
 	public ResponseEntity<Object> editBlogData(){
 		return null;
 	}
-	
+
 	@PutMapping("/admin/blogs")
 	public ResponseEntity<Object> addBlog(){
-		return null; 
+		return null;
 	}
-	
+
 	@DeleteMapping("/admin/blogs/{id}")
 	public ResponseEntity<Object> deleteBlog(){
 		return null;
 	}
-	
+
 }

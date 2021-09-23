@@ -19,21 +19,21 @@ public class Video {
 	@Id
 	@Column(unique = true, columnDefinition = "VARCHAR(10)")
 	private String id;
-	
+
 	private Stream stream;
-	
+
 	@ManyToOne(targetEntity = Subject.class)
 	private Subject subject;
-	
+
 	@ManyToMany(targetEntity = Tag.class)
 	@JoinTable(name = "video_tag", joinColumns = { @JoinColumn(name = "vid_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "tag_id") })
-	private List<Tag> tag = new LinkedList<Tag>();
-	
+	private List<Tag> tag = new LinkedList<>();
+
 	private String url;
-	
+
 	private String title;
-	
+
 	private String description;
-	
+
 }

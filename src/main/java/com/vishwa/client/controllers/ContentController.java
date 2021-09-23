@@ -13,22 +13,22 @@ public class ContentController {
 	public ResponseEntity<Object> getAllVideos(){
 		return null;
 	}
-	
+
 	@PutMapping("/streams/{stream}/subjects/{sid}/videos/{vid}/mark")
 	public ResponseEntity<Object> markAsDone(){
 		return null;
 	}
-	
+
 	@GetMapping("/streams/{stream}/subjects/{sid}/videos/{vid}/notes")
 	public ResponseEntity<Object> getNotes(){
 		return null;
 	}
-	
+
 	@PutMapping("/streams/{stream}/subjects/{sid}/videos/{vid}/notes")
 	public ResponseEntity<Object> addNotes(){
 		return null;
 	}
-	
+
 	@DeleteMapping("/users/{uid}/notes/{nid}")
 	public ResponseEntity<Object> deleteNotes(){
 		return null;

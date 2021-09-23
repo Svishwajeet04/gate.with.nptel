@@ -15,25 +15,25 @@ public class NotificationController {
 	public ResponseEntity<Object> getUnreadNotifications(){
 		return null;
 	}
-	
+
 	@GetMapping("/users/{id}/allNotification")
 	public ResponseEntity<Object> getAllNotifications(@RequestParam int day){
 		return null;
 	}
-	
+
 	@PatchMapping("/users/{id}/notification/{notificationId}/read")
 	public ResponseEntity<Object> markNotificationRead(){
 		return null;
 	}
-	
+
 	@PutMapping("/users/{id}/notification/add")
 	public ResponseEntity<Object> addNotification(){
 		return null;
 	}
-	
+
 	@DeleteMapping("/users/{id}/notification/{nid}/delete")
 	public ResponseEntity<Object> deleteNotification(){
 		return null;
 	}
-	
+
 }

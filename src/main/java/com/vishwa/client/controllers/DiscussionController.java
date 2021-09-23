@@ -6,16 +6,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DiscussionController {
-	
+
 	@GetMapping("/questions/getNext20")
 	public ResponseEntity<Object> getNext20(){
 		return null;
 	}
-	
+
 	@GetMapping("/answers/{id}")
 	public ResponseEntity<Object> getAnswer(){
 		return null;
 	}
-	
+
 }
 
