@@ -17,58 +17,58 @@ public class AnswerController {
 		return null;
 	}
 
-	@DeleteMapping("/answers/{id}")
-	public ResponseEntity<Object> deleteAnswer(@PathVariable String id, @RequestHeader("Authorization") String jwt) {
+	@DeleteMapping("/answers/{aid}")
+	public ResponseEntity<Object> deleteAnswer(@PathVariable String aid, @RequestHeader("Authorization") String jwt) {
 		return null;
 	}
 
-	@PatchMapping("/answers/{id}")
-	public ResponseEntity<Object> editAnswer(@PathVariable String id, @RequestHeader("Authorization") String jwt) {
+	@PatchMapping("/answers/{aid}")
+	public ResponseEntity<Object> editAnswer(@PathVariable String aid, @RequestHeader("Authorization") String jwt) {
 		return null;
 	}
 
-	@GetMapping("/answers/{id}/comments")
-	public ResponseEntity<Object> getAllComments(@PathVariable String id, @RequestHeader("Authorization") String jwt) {
+	@GetMapping("/answers/{aid}/comments")
+	public ResponseEntity<Object> getAllComments(@PathVariable String aid, @RequestHeader("Authorization") String jwt) {
 		return null;
 	}
 
-	@GetMapping("/answers/{id}/comments/{cid}/replies")
-	public ResponseEntity<Object> getAllreplies(@PathVariable String id, @PathVariable String cid,
+	@GetMapping("/answers/{aid}/comments/{cid}/replies")
+	public ResponseEntity<Object> getAllreplies(@PathVariable String aid, @PathVariable String cid,
 			@RequestHeader("Authorization") String jwt) {
 		return null;
 	}
 
-	@PutMapping("/answers/{id}/comments/add")
-	public ResponseEntity<Object> addComment(@PathVariable String id, @RequestHeader("Authorization") String jwt) {
+	@PutMapping("/answers/{aid}/comments/add")
+	public ResponseEntity<Object> addComment(@PathVariable String aid, @RequestHeader("Authorization") String jwt) {
 		return null;
 	}
 
-	@PutMapping("/answers/{id}/comments/{cid}/replies")
-	public ResponseEntity<Object> addReply(@PathVariable String id, @PathVariable String cid,
+	@PutMapping("/answers/{aid}/comments/{cid}/replies")
+	public ResponseEntity<Object> addReply(@PathVariable String aid, @PathVariable String cid,
 			@RequestHeader("Authorization") String jwt) {
 		return null;
 	}
 
-	@DeleteMapping("/answers/{id}/comments/{cid}")
-	public ResponseEntity<Object> deleteComment(@PathVariable String id, @PathVariable String cid,
+	@DeleteMapping("/answers/{aid}/comments/{cid}")
+	public ResponseEntity<Object> deleteComment(@PathVariable String aid, @PathVariable String cid,
 			@RequestHeader("Authorization") String jwt) {
 		return null;
 	}
 
-	@DeleteMapping("/answers/{id}/comments/{cid}/replies/{rid}")
-	public ResponseEntity<Object> deleteReply(@PathVariable String id, @PathVariable String cid,
+	@DeleteMapping("/answers/{aid}/comments/{cid}/replies/{rid}")
+	public ResponseEntity<Object> deleteReply(@PathVariable String aid, @PathVariable String cid,
 			@PathVariable String rid, @RequestHeader("Authorization") String jwt) {
 		return null;
 	}
 
-	@PatchMapping("/answers/{id}/comments/{cid}/edit")
-	public ResponseEntity<Object> editComment(@PathVariable String id, @PathVariable String cid,
+	@PatchMapping("/answers/{aid}/comments/{cid}/edit")
+	public ResponseEntity<Object> editComment(@PathVariable String aid, @PathVariable String cid,
 			@RequestHeader("Authorization") String jwt) {
 		return null;
 	}
 
-	@PatchMapping("/answers/{id}/comments/{cid}/replies/{rid}/edit")
-	public ResponseEntity<Object> editReply(@PathVariable String id, @PathVariable String cid, @PathVariable String rid,
+	@PatchMapping("/answers/{aid}/comments/{cid}/replies/{rid}/edit")
+	public ResponseEntity<Object> editReply(@PathVariable String aid, @PathVariable String cid, @PathVariable String rid,
 			@RequestHeader("Authorization") String jwt) {
 		return null;
 	}

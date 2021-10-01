@@ -36,10 +36,10 @@ public class QuestionController {
 		return null;
 	}
 
-	@PutMapping("")
-	public ResponseEntity<Object> shareQuestionInGroup(){
-		return null;
-	}
+//	@PutMapping("")
+//	public ResponseEntity<Object> shareQuestionInGroup(){
+//		return null;
+//	}
 
 	@PutMapping("/questions/{qid}/save")
 	public ResponseEntity<Object> saveQuestion(){

@@ -39,7 +39,7 @@ public class LoginController {
 		if (user != null)
 			return new ResponseEntity<>(user, HttpStatus.CREATED);
 		else {
-			return new ResponseEntity<>(null, HttpStatus.ALREADY_REPORTED);
+			return new ResponseEntity<>("email already exists", HttpStatus.FORBIDDEN);
 		}
 	}
 
