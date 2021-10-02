@@ -12,6 +12,7 @@ public class QuestionController {
 
 	@GetMapping("/questions/{qid}")
 	public ResponseEntity<Object> getQuestion(){
+		
 		return null;
 	}
 
@@ -35,11 +36,6 @@ public class QuestionController {
 	public ResponseEntity<Object> editQuestion(){
 		return null;
 	}
-
-//	@PutMapping("")
-//	public ResponseEntity<Object> shareQuestionInGroup(){
-//		return null;
-//	}
 
 	@PutMapping("/questions/{qid}/save")
 	public ResponseEntity<Object> saveQuestion(){

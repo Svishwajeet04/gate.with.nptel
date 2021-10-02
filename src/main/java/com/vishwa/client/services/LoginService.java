@@ -41,6 +41,10 @@ public class LoginService {
 		UserDetails ud = userDetailsService.loadUserByUsername(ar.getEmail());
 		final String jwt = jwtutil.createToken(ar.getEmail(), new LinkedList<String>());
 		AuthenticationResponse ar1 = new AuthenticationResponse(jwt, ((User) ud).getRole());
+		ar1.setEmail(((User) ud).getEmail());
+		ar1.setName(((User) ud).getName());
+		ar1.setId(((User) ud).getId());
+		ar1.setStream(((User) ud).getStream());
 		return ar1;
 	}
 

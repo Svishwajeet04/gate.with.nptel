@@ -45,6 +45,8 @@ public class SecurityFilter extends OncePerRequestFilter {
 						ud.getAuthorities());
 				utoken.setDetails(new WebAuthenticationDetailsSource().buildDetails(arg0));
 				SecurityContextHolder.getContext().setAuthentication(utoken);
+
+				System.out.println("\n yes i am here ");
 			}
 		}
 		arg2.doFilter(arg0, arg1);

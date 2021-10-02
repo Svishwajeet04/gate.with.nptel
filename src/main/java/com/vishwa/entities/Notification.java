@@ -41,6 +41,16 @@ public class Notification {
 
 	private String Obj2Id;
 
+	private boolean isDeleted;
+
+	public final boolean isDeleted() {
+		return isDeleted;
+	}
+
+	public final void setDeleted(boolean isDeleted) {
+		this.isDeleted = isDeleted;
+	}
+
 	public String getId() {
 		return id;
 	}
@@ -104,6 +114,5 @@ public class Notification {
 	public void setObj2Id(String obj2Id) {
 		Obj2Id = obj2Id;
 	}
-	
-	
+
 }

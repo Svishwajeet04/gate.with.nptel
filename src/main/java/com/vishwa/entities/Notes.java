@@ -31,6 +31,17 @@ public class Notes {
 
 	@ManyToOne(targetEntity = Video.class)
 	private Video video;
+	
+	private boolean isDeleted;
+	
+
+	public final boolean isDeleted() {
+		return isDeleted;
+	}
+
+	public final void setDeleted(boolean isDeleted) {
+		this.isDeleted = isDeleted;
+	}
 
 	public String getData() {
 		return data;

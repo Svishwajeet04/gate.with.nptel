@@ -56,6 +56,17 @@ public class Question {
 	private Video video;
 
 	private Scope visibility;
+	
+	private boolean isDeleted ;
+	
+
+	public final boolean isDeleted() {
+		return isDeleted;
+	}
+
+	public final void setDeleted(boolean isDeleted) {
+		this.isDeleted = isDeleted;
+	}
 
 	@ManyToMany(targetEntity = Group.class , mappedBy = "shared")
 	private List<Group> group;

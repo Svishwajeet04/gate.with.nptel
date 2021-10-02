@@ -21,7 +21,6 @@ public class CourseController {
 	@GetMapping("/users/{id}/progress")
 	public ResponseEntity<Object> getAllProgressByUser(@RequestHeader("Authorization") String access,
 			@PathVariable String id) {
-
 		List<Map<String, Object>> ls = courseService.getAllProgressByUser(id);
 		return ResponseEntity.ok(ls);
 	}

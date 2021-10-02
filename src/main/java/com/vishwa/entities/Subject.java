@@ -27,6 +27,16 @@ public class Subject {
 	@OneToMany(targetEntity = Video.class, mappedBy = "subject")
 	private List<Video> videos = new ArrayList<>();
 
+	private boolean isDeleted;
+
+	public final boolean isDeleted() {
+		return isDeleted;
+	}
+
+	public final void setDeleted(boolean isDeleted) {
+		this.isDeleted = isDeleted;
+	}
+
 	public String getId() {
 		return id;
 	}

@@ -35,6 +35,16 @@ public class Video {
 	private String title;
 
 	private String description;
+	
+	private boolean isDeleted;
+
+	public final boolean isDeleted() {
+		return isDeleted;
+	}
+
+	public final void setDeleted(boolean isDeleted) {
+		this.isDeleted = isDeleted;
+	}
 
 	public String getId() {
 		return id;

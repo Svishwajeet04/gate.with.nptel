@@ -37,6 +37,16 @@ public class Reply {
 
 	private Scope visibilty;
 
+	private boolean isDeleted;
+
+	public final boolean isDeleted() {
+		return isDeleted;
+	}
+
+	public final void setDeleted(boolean isDeleted) {
+		this.isDeleted = isDeleted;
+	}
+
 	public Answer getAid() {
 		return aid;
 	}
@@ -100,7 +110,5 @@ public class Reply {
 	public void setVisibilty(Scope visibilty) {
 		this.visibilty = visibilty;
 	}
-	
-	
 
 }

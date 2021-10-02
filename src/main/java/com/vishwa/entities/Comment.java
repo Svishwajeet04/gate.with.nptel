@@ -39,6 +39,16 @@ public class Comment {
 
 	@ManyToOne(targetEntity = User.class)
 	private User user;
+	
+	private boolean isDeleted;
+
+	public final boolean isDeleted() {
+		return isDeleted;
+	}
+
+	public final void setDeleted(boolean isDeleted) {
+		this.isDeleted = isDeleted;
+	}
 
 	private Scope visibility;
 
