@@ -32,14 +32,13 @@ public class SubjectController {
 	}
 
 	@PostMapping("/admin/streams/{stream}/subjects")
-	public ResponseEntity<Object> addSubject(@PathVariable Stream stream , @RequestBody SubjectAddDto dto) {
-		return ResponseEntity.ok(subjectService.addSubject(dto))  ;
+	public ResponseEntity<Object> addSubject(@PathVariable Stream stream, @RequestBody SubjectAddDto dto) {
+		return ResponseEntity.ok(subjectService.addSubject(dto));
 	}
 
-	@DeleteMapping("/admin/streams/{stream}/subjects")
-	public ResponseEntity<Object> deleteSubject(@PathVariable String Stream) {
-
-		return null;
+	@DeleteMapping("/admin/streams/{stream}/subjects/{sid}")
+	public ResponseEntity<Object> deleteSubject(@PathVariable Stream stream, @PathVariable String sid) {
+		return ResponseEntity.ok(subjectService.deleteSubject(stream, sid));
 	}
 
 }

@@ -6,12 +6,15 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.vishwa.admin.services.VideoService;
+import com.vishwa.dtos.AddVideoDto;
 import com.vishwa.entities.enums.Stream;
+
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 @RestController
 public class VideoController {
@@ -25,14 +28,16 @@ public class VideoController {
 		return ResponseEntity.ok(vidService.getVideosByStreamAndSubject(stream, sid));
 	}
 
-	@PutMapping("/admin/streams/{stream}/subjects/{sid}/videos")
-	public ResponseEntity<Object> addVideo() {
-		return null;
+	@PostMapping("/admin/streams/{stream}/subjects/{sid}/videos")
+	public ResponseEntity<Object> addVideo(@RequestHeader("Authorization") String access, @PathVariable Stream stream,
+			@PathVariable String sid, @RequestBody AddVideoDto dto) {
+		return ResponseEntity.ok(vidService.addVideo(dto, stream, sid));
 	}
 
 	@DeleteMapping("/admin/streams/{stream}/subjects/{sid}/videos/{vid}")
-	public ResponseEntity<Object> deleteVideo() {
-		return null;
+	public ResponseEntity<Object> deleteVideo(@PathVariable Stream stream, @PathVariable String sid,
+			@PathVariable String vid) {
+		return ResponseEntity.ok(vidService.deleteVideo(stream, sid, vid));
 	}
 
 	@PatchMapping("/admin/streams/{stream}/subjects/{sid}/videos")

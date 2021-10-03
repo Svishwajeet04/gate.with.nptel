@@ -62,10 +62,19 @@ public class SubjectService {
 		}
 		sub.setId(id);
 		subjectRepo.save(sub);
-		Map<String , Object> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<>();
 		map.put("result", "saved successfully");
 		map.put("name", sub.getName());
 		map.put("id", sub.getId());
 		return map;
+	}
+
+	public String deleteSubject(Stream stream, String sid) {
+		Subject s = subjectRepo.findById(sid).get();
+		if (s.isDeleted() == false) {
+			s.setDeleted(true);
+		}
+		subjectRepo.save(s);
+		return "deleted " + sid + " successfully";
 	}
 }
