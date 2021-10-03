@@ -60,7 +60,7 @@ public class VideoService {
 			id = ids.generate();
 
 		vid.setId(id);
-
+		vidRepo.save(vid);
 		dto.setId(id);
 		dto.setMessage("video saved successfully");
 
