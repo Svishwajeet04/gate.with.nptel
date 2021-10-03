@@ -13,7 +13,7 @@ public class AddVideoDto {
 
 	private Stream stream;
 
-	private Subject subject;
+	private SubjectAddDto subject;
 
 	private String title;
 
@@ -33,10 +33,6 @@ public class AddVideoDto {
 
 	public Stream getStream() {
 		return stream;
-	}
-
-	public Subject getSubject() {
-		return subject;
 	}
 
 	public String getTitle() {
@@ -63,7 +59,11 @@ public class AddVideoDto {
 		this.stream = stream;
 	}
 
-	public void setSubject(Subject subject) {
+	public SubjectAddDto getSubject() {
+		return subject;
+	}
+
+	public void setSubject(SubjectAddDto subject) {
 		this.subject = subject;
 	}
 

@@ -12,36 +12,41 @@ public class SubjectAddDto {
 
 	private Stream stream;
 
-	public final String getName() {
+
+	public String getName() {
 		return name;
 	}
 
-	public final void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
-	public final String getImage() {
+	public String getImage() {
 		return image;
 	}
 
-	public final void setImage(String image) {
+	public void setImage(String image) {
 		this.image = image;
 	}
 
-	public final String getId() {
+	public String getId() {
 		return id;
 	}
 
-	public final void setId(String id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
-	public final Stream getStream() {
+	public Stream getStream() {
 		return stream;
 	}
 
-	public final void setStream(Stream stream) {
+	public void setStream(Stream stream) {
 		this.stream = stream;
 	}
-
+	
+	@Override
+	public String toString() {
+		return getName();
+	}
 }

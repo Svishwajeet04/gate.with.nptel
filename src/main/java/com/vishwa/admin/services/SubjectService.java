@@ -61,6 +61,7 @@ public class SubjectService {
 			id = ids.generate();
 		}
 		sub.setId(id);
+		
 		subjectRepo.save(sub);
 		Map<String, Object> map = new HashMap<>();
 		map.put("result", "saved successfully");
