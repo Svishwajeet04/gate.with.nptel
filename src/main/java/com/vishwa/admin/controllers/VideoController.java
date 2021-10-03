@@ -7,14 +7,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.vishwa.admin.services.VideoService;
 import com.vishwa.dtos.AddVideoDto;
 import com.vishwa.entities.enums.Stream;
-
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 @RestController
 public class VideoController {
